@@ -29,7 +29,7 @@ function showResults(myData) {
 	$.each(myData, function(index, value) {
 		console.log(value.snippet.description);
 		//https://www.youtube.com/watch?v=albrXOyVGv0
-		var hrefLink = "<a href=\"https://www.youtube.com/watch?v=" + getVideoId(value) + "\">";
+		var hrefLink = "<a href=\"https://www.youtube.com/watch?v=" + getVideoId(value) + "\" target=\"_blank\">";
 		var imgLink = "<img id=\"thumbnail-img\" src=\"" + value.snippet.thumbnails.default.url + "\">";
 		$('#search-results').append("<p>" + hrefLink + imgLink + "</a></p>");
 	});
